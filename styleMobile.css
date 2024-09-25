@@ -1,0 +1,113 @@
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+
+    header{
+        display: flex;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        width: 100%;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .card-container-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 100px;
+        flex-wrap: wrap;
+        border-radius: 25px 0 0 25px;
+    }
+
+    #slideButton{
+        position: fixed;
+        top: 2.3rem;
+        right: 0;
+        background-color: rgba(128, 128, 128, 0.242);
+        color: black;
+        border-radius: 0 25px 25px 0;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        rotate: 180deg;
+        z-index: 1001;
+        animation: arrowMove 10s ease-in-out 5s infinite;
+    }
+
+    @keyframes arrowMove{
+        0%{
+            transform: translateX(0);
+        }
+        5%{
+            transform: translateX(12px) ;
+        }
+        10%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    #arrow{
+        font-size: 30px;
+    }
+
+    #arrow.open{
+        font-size: 30px;
+        transform: rotate(180deg);
+    }
+
+    header.open{
+        right: 0;
+    }
+
+    .h1-aside-container {
+        font-size: 60px;
+    }
+
+    #toggleContainer.tech-stack-grid-container {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 4rem;
+        margin: 5rem 10rem;
+    }
+
+    #toggleContainer {
+        display: none;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+    }
+
+    #hrLine {
+        width: 70%;
+        height: 2px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #toggleContainer.show {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+        column-gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 839px) {
+    h2{
+        text-align: center;
+    }
+}
