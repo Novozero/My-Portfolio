@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+p{
+    font-family: "Inter", sans-serif;
+}
+
 ul {
     display: flex;
     gap: 5rem;
@@ -28,6 +32,7 @@ a {
 
 h2{
     margin-top: 2.1rem;
+    margin-bottom: 48px;
 }
 
 /* Header */
@@ -37,6 +42,20 @@ header {
     margin-right: 4rem;
     margin-top: 2rem;
     font-family: "Inter", sans-serif;
+}
+
+#backgroundImg{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(1.3px) opacity(0.5) brightness(0.89);
 }
 
 #slideButton{
@@ -79,14 +98,25 @@ header {
     font-style: normal;
 }
 
+.container-me-child{
+    text-align: center;
+}
+
 #mainContentSection{
     max-width: 100%;
 }
 
+#techstackSection{
+    background-color: rgba(240, 248, 255, 0.37);
+    padding-bottom: 0.8rem;
+    padding-top: 1rem;
+}
+
 .h1-aside-container{
-    font-size: 80px;
+    font-size: 4rem;
     margin-top: 1rem;
     padding-bottom: 3rem;
+    font-size: clamp(3rem, 2vw + 1rem, 2rem);
 }
 
 #img-of-me {
@@ -163,13 +193,8 @@ header {
     margin: 5rem 10rem;
 }
 
-#toggleContainer {
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
 
-#toggleContainer.show {
+#toggleContainer {
     display: grid;
     opacity: 1;
     transition: opacity 1s ease-in;
@@ -181,8 +206,50 @@ header {
     margin: 5rem 10rem;
 }
 
+#projectSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    justify-items: center;
+    margin: 4rem 5rem 4rem 5rem;
+    row-gap: 2rem;
+}
+
+.projectCard{
+    border: 1px solid rgb(203, 202, 202);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(155, 155, 155, 0.447);
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    transition: 0.3s ease-in-out;
+    background-color: rgba(245, 245, 245, 0.589);
+}
+
+.projectCard:hover{
+    transform: scale(1.02);
+}
+
+.cardText{
+    padding-top: 1rem;
+}
+
+.cardLogos{
+   max-width: 40px;
+   max-height: 40px;
+    filter: grayscale(1) opacity(1);
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    margin-inline: 0.8rem;
+}
+
+#projects{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: "Inter", sans-serif;
+}
+
 /* Horizontale Linie */
-#hrLine {
+.hrLine {
     width: 70%;
     height: 2px;
     margin: 0 auto;

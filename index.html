@@ -2,15 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Site</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleMobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Site</title>
   </head>
+  
   <body>
+    <div id="backgroundImg"></div>
+    
     <header>
       <nav>
         <ul id="ul-header">
@@ -50,15 +54,15 @@
         </div>
         <aside class="aside-container">
           <div class="h1-aside-container">
-            <h1>Front-End Developer</h1>
+            <h1>Frontend Developer</h1>
           </div>
           <div class="text-aside-container">
             <span style="font-size: 30px;">
-              <p>I'm <b>passionate</b> and <b>interested</b> in all things tech. I decided to start my journey as a 
-              Front-End Developer in January 2024 and learn to code to take my first step into the 
-              tech industry and achieve my goal of becoming part of this highly interesting and 
-              fascinating field.
-              </p>
+              <p>Fueled by a <b>passion for technology</b>, I took my first steps into the world of frontend 
+                development in January 2024. Since then, I've been immersing myself in coding, embracing 
+                the challenges of creating seamless and interactive web experiences. With a <b>deep interest</b> 
+                in design and user interaction, I strive to build digital solutions that are not only 
+                functional but also enjoyable to use.</p>
             </span>
           </div>
         </aside>
@@ -71,7 +75,7 @@
           <img src="assets/techstack.png" alt="tech stack logo" class="tech-stack-img">
         </a>
       </div>
-      <hr id="hrLine">
+
       <div id="toggleContainer">
         <div class="tech-stack-container">
           <div>
@@ -99,6 +103,34 @@
           <img id="techStack" src="assets/typescript.svg" alt="typescript-logo">
           <p></p>
         </div>
+      </div>
+    </section>
+
+    <section id="projectSection">
+      <div class="cryptoScreener">
+        <a href="https://novozero.github.io/Crypto_Data/" target="_blank">
+          <div class="projectCard">
+            <img src="assets/icons8-bitcoin.svg" alt="Bitcoin">
+            <p class="cardText">Crypto Screener</p>
+            <div class="cardLogo">
+              <img src="assets/react.svg" alt="React logo" class="cardLogos">
+              <img src="assets/css.svg" alt="CSS logo" class="cardLogos">
+              <img src="assets/bootstrap.svg" alt="Bootstrap logo" class="cardLogos">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="simpsonsTrivia">
+        <a href="https://novozero.github.io/Simpsons_Trivia/" target="_blank">
+          <div class="projectCard">
+            <img src="assets/icons8-homer-simpson-480.svg" alt="Simpsons Image Wigum">
+            <p class="cardText">Simpsons Trivia</p>
+            <img src="assets/html.svg" alt="HTML logo" class="cardLogos">
+            <img src="assets/css.svg" alt="CSS logo" class="cardLogos">
+            <img src="assets/javascript.svg" alt="JavaScript logo" class="cardLogos">
+          </div>
+        </a>
       </div>
     </section>
 
